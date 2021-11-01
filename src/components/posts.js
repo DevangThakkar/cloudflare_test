@@ -7,7 +7,7 @@ const Posts = () => {
   useEffect(() => {
     const getPosts = async () => {
       const resp = await fetch(
-        "https://serverless-api.devangt.workers.dev/api/posts"
+        "https://router_template.devangt.workers.dev/posts"
       );
       const postsResp = await resp.json();
       setPosts(postsResp);
@@ -21,9 +21,9 @@ const Posts = () => {
       <h1>Posts</h1>
       {posts.map((post) => (
         <div key={post.id}>
-          <h2>
-            <Link to={`/posts/${post.id}`}>{post.title}</Link>
-          </h2>
+          <h2>{post.title}</h2>
+          <h3>{post.username}</h3>
+          <p>{post.content}</p>
         </div>
       ))}
     </div>

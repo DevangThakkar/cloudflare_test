@@ -7,7 +7,7 @@ const Post = ({ id }) => {
   useEffect(() => {
     const getPost = async () => {
       const resp = await fetch(
-        `https://serverless-api.devangt.workers.dev/api/posts/${id}`
+        `https://router_template.devangt.workers.dev/api/posts/${id}`
       );
       const postResp = await resp.json();
       setPost(postResp);
