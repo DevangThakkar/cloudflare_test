@@ -7,7 +7,7 @@ const Posts = () => {
   useEffect(() => {
     const getPosts = async () => {
       const resp = await fetch(
-        "https://router_template.devangt.workers.dev/posts/"
+        "https://router_template.devangt.workers.dev/posts"
       );
       const postsResp = await resp.json();
       setPosts(postsResp);
@@ -16,19 +16,18 @@ const Posts = () => {
     getPosts();
   }, []);
 
-  // return (
-  //   <div>
-  //     <h1>Posts</h1>
-  //     {posts.map((post) => (
-  //       <div>
-  //         <h2>{post.title}</h2>
-  //         <h3>{post.username}</h3>
-  //         <div><p>{post.content}</p></div>
-  //       </div>
-  //     ))}
-  //   </div>
-  // );
-  return new Response(posts)
+  return (
+    <div>
+      <h1>Posts</h1>
+      {posts.map((post) => (
+        <div key={post.id}>
+          <h2>
+            <Link to={`/posts/${post.id}`}>{post.title}</Link>
+          </h2>
+        </div>
+      ))}
+    </div>
+  );
 };
 
 export default Posts;
