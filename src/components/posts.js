@@ -20,9 +20,11 @@ const Posts = () => {
     <div>
       <h1>Posts</h1>
       {posts.map((post) => (
+        <div>
           <h2>{post.title}</h2>
           <h3>{post.username}</h3>
-          <p>{post.content}</p>
+          <div><p>{post.content}</p></div>
+        </div>
       ))}
     </div>
   );
