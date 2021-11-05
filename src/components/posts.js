@@ -26,8 +26,8 @@ const Posts = () => {
           <p>{post.content}</p>
         </div>
       ))}
+      <a>made by <a href='https:\/\/www.devangthakkar.com'>devang</a>
     </div>
-    <div>made by <a href='https://www.devangthakkar.com'>devang</a></div>
   );
 };
 
