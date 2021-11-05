@@ -1,7 +1,7 @@
 body {
-  margin-left: 20vw;
-  margin-right: 20vw;
-  font-family:'europa', sans-serif;
+  margin-left: 25vw;
+  margin-right: 25vw;
+  font-family: monospace;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: floralwhite;
@@ -9,12 +9,24 @@ body {
 }
 
 h1 {
+  padding-top: 100px;
+  padding-bottom: 50px;
   text-align: center;
+  font-size: 42px;
+}
+
+h2 {
+  font-size: 25px;
 }
 
 h3 {
   font-weight: normal;
 }
+
+p {
+  font-size: 18px;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;

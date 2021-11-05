@@ -22,7 +22,7 @@ const Posts = () => {
       {posts.map((post) => (
         <div key={post.id}>
           <h2>{post.title}</h2>
-          <h3>Written by {post.username}</h3>
+          <h3>written by {post.username}</h3>
           <p>{post.content}</p>
         </div>
       ))}
