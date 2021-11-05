@@ -18,11 +18,11 @@ const Posts = () => {
 
   return (
     <div>
-      <h1>Posts</h1>
+      <h1>Flarebook by Devang</h1>
       {posts.map((post) => (
         <div key={post.id}>
           <h2>{post.title}</h2>
-          <h3>{post.username}</h3>
+          <h3>Written by {post.username}</h3>
           <p>{post.content}</p>
         </div>
       ))}
