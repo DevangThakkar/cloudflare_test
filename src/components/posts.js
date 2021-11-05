@@ -16,6 +16,8 @@ const Posts = () => {
     getPosts();
   }, []);
 
+  let url="https://www.devangthakkar.com";
+
   return (
     <div>
       <h1>flarebook</h1>
@@ -26,7 +28,7 @@ const Posts = () => {
           <p>{post.content}</p>
         </div>
       ))}
-      <a>made by <a href='https:\/\/www.devangthakkar.com'>devang</a>
+      made by <a href={url}>devang thakkar</a>
     </div>
   );
 };
