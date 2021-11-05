@@ -24,10 +24,21 @@ h3 {
   font-weight: normal;
 }
 
+h4 {
+  text-align: center;
+  font-size: 18px;
+}
+
 p {
   font-size: 18px;
 }
 
+a {
+  color: floralwhite;
+  text-decoration: none;
+  text-align: center;
+  padding:  100 px;
+}
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
