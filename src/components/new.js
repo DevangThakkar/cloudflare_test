@@ -19,7 +19,7 @@ export default class New extends React.Component {
           <h1>write something</h1>
         </div>
         <form onSubmit={this.handleSubmit}>
-        <div class="field" class="norm-font-size">
+        <div class="field norm-font-size">
           <label class="justify" htmlFor="title">title       </label>
           <input
             type="text"
@@ -27,7 +27,7 @@ export default class New extends React.Component {
            ref={(input) => this.title = input}
           />
         </div>
-        <div class="field" class="norm-font-size">
+        <div class="field norm-font-size">
           <label class="justify" htmlFor="username">username    </label>
           <input
             type="text"
@@ -35,7 +35,7 @@ export default class New extends React.Component {
             ref={(input) => this.username = input}
           />
         </div>
-        <div class="large-field" class="field" class="norm-font-size">
+        <div class="large-field field norm-font-size">
           <label class="justify" htmlFor="content">content     </label>
           <textarea
             type="textarea"
