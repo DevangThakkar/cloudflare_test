@@ -14,10 +14,10 @@ export default class New extends React.Component {
 
   render() {
     return (
-      <div>
-        <h1>write something</h1>
-      </div>
       <React.Fragment>
+        <div>
+          <h1>write something</h1>
+        </div>
         <form onSubmit={this.handleSubmit}>
         <div class="field" class="norm-font-size">
           <label class="justify" htmlFor="title">title       </label>
