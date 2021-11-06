@@ -14,10 +14,7 @@ export default class New extends React.Component {
         method: "POST",
         headers: {
           "Accept": "application/json",
-          "Content-Type": "application/json",
-          "Access-Control-Allow-Origin": "*",
-          "Access-Control-Allow-Methods": "GET,HEAD,POST,OPTIONS",
-          "Access-Control-Max-Age": "86400",
+          "Content-Type": "application/json"
         },
         body: JSON.stringify({title: this.title.value, username: this.username.value, content: this.content.value})
       });
