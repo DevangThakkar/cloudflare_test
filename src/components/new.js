@@ -48,4 +48,74 @@ const New = () => {
   return (html);
 };
 
-export default New;
+const New = () => {
+  const [new, setNew] = useState([]);
+
+  useEffect(() => {
+    const getNew = async () => {
+      const resp = await fetch(
+        "https://router_template.devangt.workers.dev/posts"
+      );
+      const postsResp = await resp.json();
+      setPosts(postsResp);
+    };
+
+    getPosts();
+  }, []);
+
+  let url="https://www.devangthakkar.com";
+
+  return (
+    <div>
+      <h1>flarebook</h1>
+      {posts.map((post) => (
+        <div key={post.id}>
+          <h2>{post.title}</h2>
+          <h3>written by {post.username}</h3>
+          <p>{post.content}</p>
+        </div>
+      ))}
+      <h4>made by <a href={url}>devang thakkar</a></h4>
+    </div>
+  );
+};
+
+export default class New extends React.Component {
+  constructor(props){
+    super(props);
+    this.state = {title: '', username: '', content: ''};
+  }
+
+  handleSubmit = event => {
+    event.preventDefault();
+    alert('Your username is: ' + this.title.value);
+  };
+
+  render() {
+   return (
+     <React.Fragment>
+       <form onSubmit={this.handleSubmit}>
+         <label htmlFor="title">title</label>
+         <input
+           type="text"
+           name="title"
+           ref={(input) => this.title = input}
+         />
+         <label htmlFor="username">username</label>
+         <input
+           type="text"
+           name="username"
+           ref={(input) => this.username = input}
+         />
+         <label htmlFor="content">content</label>
+         <input
+           type="textarea"
+           name="content"
+           ref={(input) => this.content = input}
+         />
+       </form>
+
+     </React.Fragment>
+   );
+ }
+}
