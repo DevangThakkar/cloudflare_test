@@ -88,7 +88,7 @@ export default class New extends React.Component {
 
   handleSubmit = event => {
     event.preventDefault();
-    alert('Your username is: ' + this.title.value);
+    console.log('Your username is: ' + this.title.value);
   };
 
   render() {
@@ -113,8 +113,11 @@ export default class New extends React.Component {
            name="content"
            ref={(input) => this.content = input}
          />
+        <button
+          type="submit" 
+          className="btn btn-primary">Post
+        </button>
        </form>
-
      </React.Fragment>
    );
  }
