@@ -14,6 +14,9 @@ export default class New extends React.Component {
 
   render() {
     return (
+      <div>
+        <h1>write something</h1>
+      </div>
       <React.Fragment>
         <form onSubmit={this.handleSubmit}>
         <div class="field" class="norm-font-size">
@@ -40,7 +43,7 @@ export default class New extends React.Component {
             ref={(input) => this.content = input}
           />
         </div>
-        <div>
+        <div class="field">
           <button
             type="submit" 
             className="btn btn-primary">Post
