@@ -9,6 +9,8 @@ export default class New extends React.Component {
 
   handleSubmit = event => {
     event.preventDefault();
+    console.log("Hi");
+    console.log(JSON.stringify({'title': this.title.value, 'username': this.username.value, 'content': this.content.value}));
     (async () => {
       const rawResponse = await fetch("https://router_template.devangt.workers.dev/posts", {
         method: "POST",
@@ -20,7 +22,6 @@ export default class New extends React.Component {
       const content = await rawResponse.json();
 
       console.log(content);
-      console.log(JSON.stringify({'title': this.title.value, 'username': this.username.value, 'content': this.content.value}));
     })();
   };
 
