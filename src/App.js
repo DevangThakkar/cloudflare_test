@@ -1,12 +1,13 @@
 import { Router } from "@reach/router";
 
 import Posts from './components/posts'
-import Post from './components/post'
+import New from './components/new'
 
 function App() {
   return (
     <Router>
       <Posts path="/" />
+      <New path="/new" />
     </Router>
   );
 }
