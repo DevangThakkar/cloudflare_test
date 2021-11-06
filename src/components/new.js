@@ -9,7 +9,20 @@ export default class New extends React.Component {
 
   handleSubmit = event => {
     event.preventDefault();
-    console.log('Your username is: ' + this.title.value);
+    (async () => {
+      const rawResponse = await fetch("https://router_template.devangt.workers.dev/posts", {
+        method: 'POST',
+        headers: {
+          'Accept': 'application/json',
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({title: this.title.value, username: this.username.value, content: this.content.value})
+      });
+      const content = await rawResponse.json();
+
+      console.log(content);
+      console.log(JSON.stringify({title: this.title.value, username: this.username.value, content: this.content.value}));
+    })();
   };
 
   render() {
@@ -22,6 +35,7 @@ export default class New extends React.Component {
         <div class="field">
           <label class="justify" htmlFor="title">title       </label>
           <input
+            required
             type="text"
             name="title"
            ref={(input) => this.title = input}
@@ -30,6 +44,7 @@ export default class New extends React.Component {
         <div class="field">
           <label class="justify" htmlFor="username">username    </label>
           <input
+            required
             type="text"
             name="username"
             ref={(input) => this.username = input}
@@ -38,6 +53,7 @@ export default class New extends React.Component {
         <div class="large-field field">
           <label class="justify" htmlFor="content">content     </label>
           <textarea
+            required
             type="textarea"
             name="content"
             ref={(input) => this.content = input}
