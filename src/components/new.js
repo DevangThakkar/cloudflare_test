@@ -15,12 +15,12 @@ export default class New extends React.Component {
         // headers: {
         //   "Content-Type": "application/json"
         // },
-        body: JSON.stringify({title: this.title.value, username: this.username.value, content: this.content.value})
+        body: JSON.stringify({'title': this.title.value, 'username': this.username.value, 'content': this.content.value})
       });
       const content = await rawResponse.json();
 
       console.log(content);
-      console.log(JSON.stringify({title: this.title.value, username: this.username.value, content: this.content.value}));
+      console.log(JSON.stringify({'title': this.title.value, 'username': this.username.value, 'content': this.content.value}));
     })();
   };
 
