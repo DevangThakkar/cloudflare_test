@@ -4,17 +4,20 @@ import { Link } from "@reach/router";
 export default class New extends React.Component {
   constructor(props){
     super(props);
-    this.state = {title: '', username: '', content: ''};
+    this.state = {title: "", username: "", content: ""};
   }
 
   handleSubmit = event => {
     event.preventDefault();
     (async () => {
       const rawResponse = await fetch("https://router_template.devangt.workers.dev/posts", {
-        method: 'POST',
+        method: "POST",
         headers: {
-          'Accept': 'application/json',
-          'Content-Type': 'application/json'
+          "Accept": "application/json",
+          "Content-Type": "application/json",
+          "Access-Control-Allow-Origin": "*",
+          "Access-Control-Allow-Methods": "GET,HEAD,POST,OPTIONS",
+          "Access-Control-Max-Age": "86400",
         },
         body: JSON.stringify({title: this.title.value, username: this.username.value, content: this.content.value})
       });
