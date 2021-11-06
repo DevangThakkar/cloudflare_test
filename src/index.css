@@ -45,6 +45,8 @@ a {
 
 .field {
   margin-top: 20px;
+  font-size: 18px;
+  font-family: monospace;
 }
 
 .large-field {
@@ -52,19 +54,15 @@ a {
 }
 
 input {
-  font-family: monospace;
   font-size: 16px;
   width: 40vw;
 }
 
 textarea {
-  font-family: monospace;
-  font-size: 18px;
   width: calc(40vw + 2px);
   height: 180px;
 }
 
 button {
   font-family: monospace;
-  font-size: 18px;
 }
