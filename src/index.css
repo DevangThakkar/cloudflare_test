@@ -43,14 +43,12 @@ a {
   white-space: pre;
 }
 
-.field {
-  width: 30vw;
-}
-
 .large-field {
   height: 200px;
 }
 
-.norm-font-size {
-  font-size: 18px;
+input, textarea {
+  font-family: monospace;
+  font-size: 16px;
+  width: 15vw;
 }
