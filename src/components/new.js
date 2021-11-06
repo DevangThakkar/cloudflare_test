@@ -14,9 +14,9 @@ export default class New extends React.Component {
     (async () => {
       const rawResponse = await fetch("https://router_template.devangt.workers.dev/posts", {
         method: "POST",
-        // headers: {
-        //   "Content-Type": "application/json"
-        // },
+        headers: {
+          "Content-Type": "application/json"
+        },
         body: JSON.stringify({'title': this.title.value, 'username': this.username.value, 'content': this.content.value})
       });
       const content = await rawResponse.json();
