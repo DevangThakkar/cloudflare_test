@@ -38,7 +38,19 @@ a {
   color: floralwhite;
   text-decoration: none;
 }
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+
+.justify {
+  white-space: pre;
+}
+
+.field {
+  width: 30vw;
+}
+
+.large-field {
+  height: 200px;
+}
+
+.norm-font-size {
+  font-size: : 18px;
 }

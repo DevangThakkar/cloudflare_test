@@ -16,25 +16,25 @@ export default class New extends React.Component {
     return (
       <React.Fragment>
         <form onSubmit={this.handleSubmit}>
-        <div>
-          <label htmlFor="title">title</label>
+        <div class="field" class="norm-font-size">
+          <label class="justify" htmlFor="title">title       </label>
           <input
             type="text"
             name="title"
            ref={(input) => this.title = input}
           />
         </div>
-        <div>
-          <label htmlFor="username">username</label>
+        <div class="field" class="norm-font-size">
+          <label class="justify" htmlFor="username">username    </label>
           <input
             type="text"
             name="username"
             ref={(input) => this.username = input}
           />
         </div>
-        <div class="large-field">
-          <label htmlFor="content">content</label>
-          <input
+        <div class="large-field" class="field" class="norm-font-size">
+          <label class="justify" htmlFor="content">content     </label>
+          <textarea
             type="textarea"
             name="content"
             ref={(input) => this.content = input}
