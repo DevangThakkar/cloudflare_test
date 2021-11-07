@@ -21,7 +21,7 @@ const Posts = () => {
   return (
     <div>
       <h1>flarebook</h1>
-      <h2 class="right-aligned">create a post <Link to="/new">here</Link></h2>
+      <h2 class="right-aligned"><Link to="/new">create a post here</Link></h2>
       {posts.map((post) => (
         <div key={post.id}>
           <h2>{post.title}</h2>

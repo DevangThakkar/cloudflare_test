@@ -57,6 +57,9 @@ a {
   text-align: right;
 }
 
+.italics {
+  font-style: italic;
+}
 input {
   width: 40vw;
   font-size: 16px;
