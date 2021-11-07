@@ -18,6 +18,7 @@ export default class New extends React.Component {
         body: JSON.stringify({'title': this.title.value, 'username': this.username.value, 'content': this.content.value})
       });
     })();
+    window.location="/new";
   };
 
   render() {
