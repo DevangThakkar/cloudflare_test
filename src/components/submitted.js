@@ -12,7 +12,6 @@ export default class Submitted extends React.Component {
         <h1>you created a post!</h1>
         <h2 style="text-align:center;">Check it out <Link to="/">here</Link>. It might take a few seconds to update.</h2>
         <h2 style="text-align:center;">Alternatively, create a new post <Link to="/">here</Link>.</h2>
-        <h4>made by <a href={url}>devang thakkar</a></h4>
       </div>
    );
  }
