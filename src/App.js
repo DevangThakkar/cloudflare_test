@@ -8,6 +8,7 @@ function App() {
     <Router>
       <Posts path="/" />
       <New path="/new" />
+      <Submitted path="/submitted" />
     </Router>
   );
 }
